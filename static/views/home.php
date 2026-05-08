@@ -75,32 +75,32 @@ $schema = [
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?= e($title); ?></title>
-    <meta name="description" content="<?= e($description); ?>">
+    <title><?php e($title); ?></title>
+    <meta name="description" content="<?php e($description); ?>">
     <meta name="robots" content="index,follow,max-image-preview:large">
     <meta name="theme-color" content="#0b1020">
-    <link rel="canonical" href="<?= e($canonical); ?>">
+    <link rel="canonical" href="<?php e($canonical); ?>">
     <link rel="icon" href="/assets/images/logo-mark.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="/assets/css/style.css" as="style">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=<?= e(str_replace(' ', '+', $fontFamily)); ?>:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=<?php e(str_replace(' ', '+', $fontFamily)); ?>:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="/assets/css/style.css">
 
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="<?= e($siteName); ?>">
-    <meta property="og:title" content="<?= e($title); ?>">
-    <meta property="og:description" content="<?= e($description); ?>">
-    <meta property="og:url" content="<?= e($canonical); ?>">
-    <meta property="og:image" content="<?= e($ogImage); ?>">
+    <meta property="og:site_name" content="<?php e($siteName); ?>">
+    <meta property="og:title" content="<?php e($title); ?>">
+    <meta property="og:description" content="<?php e($description); ?>">
+    <meta property="og:url" content="<?php e($canonical); ?>">
+    <meta property="og:image" content="<?php e($ogImage); ?>">
     <meta property="og:image:alt" content="Lima PHP framework promotional card">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="<?= e($title); ?>">
-    <meta name="twitter:description" content="<?= e($description); ?>">
-    <meta name="twitter:image" content="<?= e($ogImage); ?>">
+    <meta name="twitter:title" content="<?php e($title); ?>">
+    <meta name="twitter:description" content="<?php e($description); ?>">
+    <meta name="twitter:image" content="<?php e($ogImage); ?>">
 
-    <script type="application/ld+json"><?= json_encode($schema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT); ?></script>
+    <script type="application/ld+json"><?php json_encode($schema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT); ?></script>
 </head>
 <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
@@ -116,8 +116,8 @@ $schema = [
                     <a href="#why-lima">Why Lima</a>
                     <a href="#developer-flow">Developer Flow</a>
                     <a href="#faq">FAQ</a>
-                    <a class="button button-secondary" href="<?= e($docsUrl); ?>" target="_blank" rel="noopener noreferrer">
-                        <?= lucide_icon('book-open'); ?>
+                    <a class="button button-secondary" href="<?php e($docsUrl); ?>" target="_blank" rel="noopener noreferrer">
+                        <?php lucide_icon('book-open'); ?>
                         <span>Read docs</span>
                     </a>
                 </nav>
@@ -135,22 +135,22 @@ $schema = [
                         <div class="hero-copy">
                         <p class="hero-text">Lima is built for developers who want a clean MVC workflow, familiar PHP patterns, and the freedom to render with PHP or Twig. It keeps the path from idea to shipped product clear, fast, and enjoyable.</p>
                         <div class="hero-actions">
-                            <a class="button button-primary" href="<?= e($docsUrl); ?>" target="_blank" rel="noopener noreferrer">
-                                <?= lucide_icon('book-open'); ?>
+                            <a class="button button-primary" href="<?php e($docsUrl); ?>" target="_blank" rel="noopener noreferrer">
+                                <?php lucide_icon('book-open'); ?>
                                 <span>Explore the documentation</span>
                             </a>
                             <a class="button button-ghost" href="#code-sample">
-                                <?= lucide_icon('arrow-right'); ?>
+                                <?php lucide_icon('arrow-right'); ?>
                                 <span>See the workflow</span>
                             </a>
                         </div>
                         <div class="hero-meta" aria-label="Framework quick facts">
                             <?php foreach ($highlights as $highlight): ?>
                                 <article class="meta-card">
-                                    <div class="meta-icon"><?= lucide_icon($highlight['icon'] ?? 'code'); ?></div>
+                                    <div class="meta-icon"><?php lucide_icon($highlight['icon'] ?? 'code'); ?></div>
                                     <div>
-                                        <h2><?= e($highlight['label'] ?? 'Highlight'); ?></h2>
-                                        <p><?= e($highlight['copy'] ?? ''); ?></p>
+                                        <h2><?php e($highlight['label'] ?? 'Highlight'); ?></h2>
+                                        <p><?php e($highlight['copy'] ?? ''); ?></p>
                                     </div>
                                 </article>
                             <?php endforeach; ?>
@@ -165,22 +165,22 @@ $schema = [
                                     <span></span>
                                 </div>
                                 <div class="terminal-block">
-                                    <p class="panel-label"><?= lucide_icon('terminal'); ?><span>Install</span></p>
-                                    <pre><code><?= e($codeSamples['install'] ?? 'composer require spacecow/lima-mvc'); ?></code></pre>
+                                    <p class="panel-label"><?php lucide_icon('terminal'); ?><span>Install</span></p>
+                                    <pre><code><?php e($codeSamples['install'] ?? 'composer require spacecow/lima-mvc'); ?></code></pre>
                                 </div>
                                 <div class="code-columns">
                                     <section>
-                                        <p class="panel-label"><?= lucide_icon('signpost'); ?><span>Routes</span></p>
-                                        <pre><code><?= e($codeSamples['route'] ?? ''); ?></code></pre>
+                                        <p class="panel-label"><?php lucide_icon('signpost'); ?><span>Routes</span></p>
+                                        <pre><code><?php e($codeSamples['route'] ?? ''); ?></code></pre>
                                     </section>
                                     <section>
-                                        <p class="panel-label"><?= lucide_icon('code'); ?><span>Controller</span></p>
-                                        <pre><code><?= e($codeSamples['controller'] ?? ''); ?></code></pre>
+                                        <p class="panel-label"><?php lucide_icon('code'); ?><span>Controller</span></p>
+                                        <pre><code><?php e($codeSamples['controller'] ?? ''); ?></code></pre>
                                     </section>
                                 </div>
                                 <div class="terminal-block">
-                                    <p class="panel-label"><?= lucide_icon('sparkles'); ?><span>Twig or PHP views</span></p>
-                                    <pre><code><?= e($codeSamples['view'] ?? ''); ?></code></pre>
+                                    <p class="panel-label"><?php lucide_icon('sparkles'); ?><span>Twig or PHP views</span></p>
+                                    <pre><code><?php e($codeSamples['view'] ?? ''); ?></code></pre>
                                 </div>
                             </div>
                         </aside>
@@ -191,15 +191,15 @@ $schema = [
             <section class="trust-strip" aria-label="Framework summary">
                 <div class="container trust-grid">
                     <article class="trust-card">
-                        <div class="trust-icon"><?= lucide_icon('package'); ?></div>
-                        <p><strong><?= e($packageName); ?></strong> keeps Lima composer-first and easy to integrate.</p>
+                        <div class="trust-icon"><?php lucide_icon('package'); ?></div>
+                        <p><strong><?php e($packageName); ?></strong> keeps Lima composer-first and easy to integrate.</p>
                     </article>
                     <article class="trust-card">
-                        <div class="trust-icon"><?= lucide_icon('sparkles'); ?></div>
+                        <div class="trust-icon"><?php lucide_icon('sparkles'); ?></div>
                         <p>Use plain PHP templates for speed or switch to Twig when the project benefits from it.</p>
                     </article>
                     <article class="trust-card">
-                        <div class="trust-icon"><?= lucide_icon('layers'); ?></div>
+                        <div class="trust-icon"><?php lucide_icon('layers'); ?></div>
                         <p>Built for developers who care about readable structure, fast iteration, and maintainable MVC code.</p>
                     </article>
                 </div>
@@ -215,9 +215,9 @@ $schema = [
                     <div class="pillar-grid">
                         <?php foreach ($pillars as $pillar): ?>
                             <article class="pillar-card">
-                                <div class="card-icon"><?= lucide_icon($pillar['icon'] ?? 'code'); ?></div>
-                                <h3><?= e($pillar['title'] ?? ''); ?></h3>
-                                <p><?= e($pillar['copy'] ?? ''); ?></p>
+                                <div class="card-icon"><?php lucide_icon($pillar['icon'] ?? 'code'); ?></div>
+                                <h3><?php e($pillar['title'] ?? ''); ?></h3>
+                                <p><?php e($pillar['copy'] ?? ''); ?></p>
                             </article>
                         <?php endforeach; ?>
                     </div>
@@ -234,9 +234,9 @@ $schema = [
                     <div class="workflow-list">
                         <?php foreach ($workflow as $item): ?>
                             <article class="workflow-card">
-                                <p class="workflow-step"><?= e($item['step'] ?? ''); ?></p>
-                                <h3><?= e($item['title'] ?? ''); ?></h3>
-                                <p><?= e($item['copy'] ?? ''); ?></p>
+                                <p class="workflow-step"><?php e($item['step'] ?? ''); ?></p>
+                                <h3><?php e($item['title'] ?? ''); ?></h3>
+                                <p><?php e($item['copy'] ?? ''); ?></p>
                             </article>
                         <?php endforeach; ?>
                     </div>
@@ -250,8 +250,8 @@ $schema = [
                         <h2>Documentation is where curiosity turns into adoption.</h2>
                         <p>Developers evaluating a framework want a short path from interest to understanding. Send them straight to the official docs and keep that journey friction-free.</p>
                     </div>
-                    <a class="button button-primary" href="<?= e($docsUrl); ?>" target="_blank" rel="noopener noreferrer">
-                        <?= lucide_icon('book-open'); ?>
+                    <a class="button button-primary" href="<?php e($docsUrl); ?>" target="_blank" rel="noopener noreferrer">
+                        <?php lucide_icon('book-open'); ?>
                         <span>Open the docs</span>
                     </a>
                 </div>
@@ -266,8 +266,8 @@ $schema = [
                     <div class="faq-list">
                         <?php foreach ($faqs as $faq): ?>
                             <details class="faq-item">
-                                <summary><?= e($faq['question'] ?? ''); ?></summary>
-                                <p><?= e($faq['answer'] ?? ''); ?></p>
+                                <summary><?php e($faq['question'] ?? ''); ?></summary>
+                                <p><?php e($faq['answer'] ?? ''); ?></p>
                             </details>
                         <?php endforeach; ?>
                     </div>
@@ -285,7 +285,7 @@ $schema = [
                     <p>A developer-focused PHP MVC framework with a modern feel and a clear path to production-ready structure.</p>
                 </div>
                 <div class="footer-links">
-                    <a href="<?= e($docsUrl); ?>" target="_blank" rel="noopener noreferrer">Documentation</a>
+                    <a href="<?php e($docsUrl); ?>" target="_blank" rel="noopener noreferrer">Documentation</a>
                     <a href="#why-lima">Why Lima</a>
                     <a href="#faq">FAQ</a>
                 </div>
