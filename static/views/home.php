@@ -85,21 +85,6 @@ $view->get_header();
                                 <?php echo lucide_icon('book-open'); ?>
                                 <span>Explore the documentation</span>
                             </a>
-                            <!-- <a class="button button-ghost" href="#code-sample">
-                                <?php echo lucide_icon('arrow-right'); ?>
-                                <span>See the workflow</span>
-                            </a> -->
-                        </div>
-                        <div class="hero-meta" aria-label="Framework quick facts">
-                            <?php foreach ($highlights as $highlight): ?>
-                                <article class="meta-card">
-                                    <div class="meta-icon"><?php echo lucide_icon($highlight['icon'] ?? 'code'); ?></div>
-                                    <div>
-                                        <h2><?php echo e($highlight['label'] ?? 'Highlight'); ?></h2>
-                                        <p><?php echo e($highlight['copy'] ?? ''); ?></p>
-                                    </div>
-                                </article>
-                            <?php endforeach; ?>
                         </div>
                         </div>
 
@@ -111,22 +96,8 @@ $view->get_header();
                                     <span></span>
                                 </div>
                                 <div class="terminal-block">
-                                    <p class="panel-label"><?php echo lucide_icon('terminal'); ?><span>Install</span></p>
+                                    <p class="panel-label"><?php echo lucide_icon('terminal'); ?><span>Install the Framework</span></p>
                                     <pre><code><?php echo e($codeSamples['install'] ?? 'composer require spacecow/lima-mvc'); ?></code></pre>
-                                </div>
-                                <div class="code-columns">
-                                    <section>
-                                        <p class="panel-label"><?php echo lucide_icon('signpost'); ?><span>Routes</span></p>
-                                        <pre><code><?php echo e($codeSamples['route'] ?? ''); ?></code></pre>
-                                    </section>
-                                    <section>
-                                        <p class="panel-label"><?php echo lucide_icon('code'); ?><span>Controller</span></p>
-                                        <pre><code><?php echo e($codeSamples['controller'] ?? ''); ?></code></pre>
-                                    </section>
-                                </div>
-                                <div class="terminal-block">
-                                    <p class="panel-label"><?php echo lucide_icon('sparkles'); ?><span>Twig or PHP views</span></p>
-                                    <pre><code><?php echo e($codeSamples['view'] ?? ''); ?></code></pre>
                                 </div>
                             </div>
                         </aside>
