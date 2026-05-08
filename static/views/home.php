@@ -178,7 +178,7 @@ $view->get_header();
                 <div class="container">
                     <div class="section-heading compact">
                         <p class="eyebrow">Questions developers ask</p>
-                        <h2>Answer the adoption blockers before they slow momentum.</h2>
+                        <h2 class="mb-2">Answer the adoption blockers before they slow momentum.</h2>
                     </div>
                     <div class="faq-list">
                         <?php foreach ($faqs as $faq): ?>
