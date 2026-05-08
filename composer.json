@@ -1,0 +1,5 @@
+{
+    "require": {
+        "spacecow/lima-mvc": "^1.0"
+    }
+}
