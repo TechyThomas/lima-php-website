@@ -1,0 +1,42 @@
+@use "../abstracts/variables" as *;
+
+.meta-card,
+.pillar-card,
+.workflow-card,
+.cta-panel,
+.faq-item,
+.panel-window {
+    position: relative;
+    border: 1px solid $color-border;
+    background: $color-surface;
+    border-radius: $radius-lg;
+    box-shadow: 0 28px 80px $color-shadow;
+}
+
+.meta-card {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.85rem;
+    padding: 1rem;
+
+    h2 {
+        margin: 0;
+        font-size: 1rem;
+    }
+
+    p {
+        margin: 0.3rem 0 0;
+        font-size: 0.96rem;
+    }
+}
+
+.meta-icon,
+.card-icon {
+    display: inline-grid;
+    place-items: center;
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 18px;
+    background: linear-gradient(135deg, rgba(255, 107, 87, 0.18), rgba(87, 227, 196, 0.16));
+    color: $color-accent;
+}

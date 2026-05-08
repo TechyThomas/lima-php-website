@@ -1,0 +1,15 @@
+.trust-strip {
+    padding: 1rem 0 0;
+}
+
+.trust-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+
+    p {
+        margin: 0;
+        padding: 1rem 1.1rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+}

@@ -1,0 +1,127 @@
+@use "../abstracts/variables" as *;
+
+.hero-text,
+.section-heading p,
+.pillar-card p,
+.workflow-card p,
+.faq-item p,
+.site-footer p,
+.trust-grid p {
+    color: $color-text-soft;
+}
+
+.section {
+    padding: 5rem 0;
+}
+
+.section-alt {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.015), rgba(255, 255, 255, 0));
+}
+
+.section-heading {
+    max-width: 66ch;
+    margin-bottom: 2rem;
+
+    &.compact {
+        margin-bottom: 0;
+    }
+
+    h2 {
+        margin: 0;
+        font-size: clamp(2rem, 4vw, 3.6rem);
+        line-height: 1;
+        letter-spacing: -0.05em;
+    }
+
+    p:last-child {
+        margin: 1rem 0 0;
+    }
+}
+
+.pillar-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.pillar-card {
+    padding: 1.4rem;
+
+    h3 {
+        margin: 1rem 0 0.7rem;
+        font-size: 1.3rem;
+    }
+
+    p {
+        margin: 0;
+    }
+}
+
+.split-section {
+    display: grid;
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+    gap: 1rem;
+    align-items: start;
+}
+
+.workflow-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.workflow-card {
+    padding: 1.35rem 1.4rem;
+}
+
+.workflow-step {
+    margin: 0 0 0.4rem;
+    color: $color-accent;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.workflow-card h3,
+.cta-panel h2 {
+    margin: 0;
+    font-size: 1.45rem;
+}
+
+.cta-panel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 1.6rem;
+    background: radial-gradient(circle at right top, rgba(210, 255, 99, 0.18), transparent 26%), $color-surface;
+}
+
+.faq-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.faq-item {
+    padding: 1.15rem 1.25rem;
+
+    summary {
+        cursor: pointer;
+        list-style: none;
+        font-weight: 700;
+    }
+
+    summary::-webkit-details-marker {
+        display: none;
+    }
+
+    p {
+        margin: 0.8rem 0 0;
+    }
+}
+
+.icon {
+    width: 1.05rem;
+    height: 1.05rem;
+    flex: 0 0 auto;
+}

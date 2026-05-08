@@ -1,0 +1,81 @@
+@use "../abstracts/variables" as *;
+
+.hero-panel {
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: -1.5rem 1rem auto auto;
+        width: 8rem;
+        height: 8rem;
+        border-radius: 999px;
+        background: rgba(255, 107, 87, 0.26);
+        filter: blur(42px);
+        pointer-events: none;
+    }
+}
+
+.panel-window {
+    padding: 1.2rem;
+}
+
+.panel-topbar {
+    display: flex;
+    gap: 0.45rem;
+    margin-bottom: 1rem;
+
+    span {
+        width: 0.8rem;
+        height: 0.8rem;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.24);
+
+        &:first-child {
+            background: #ff6b57;
+        }
+
+        &:nth-child(2) {
+            background: #ffd166;
+        }
+
+        &:nth-child(3) {
+            background: #57e3c4;
+        }
+    }
+}
+
+.terminal-block + .code-columns,
+.code-columns + .terminal-block {
+    margin-top: 1rem;
+}
+
+.code-columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.panel-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    margin: 0 0 0.7rem;
+    font-size: 0.92rem;
+    color: $color-secondary;
+}
+
+pre {
+    margin: 0;
+    padding: 1rem;
+    overflow: auto;
+    border-radius: $radius-md;
+    background: $color-surface-strong;
+    color: #f8fbff;
+    font-size: 0.92rem;
+    line-height: 1.55;
+}
+
+code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+}

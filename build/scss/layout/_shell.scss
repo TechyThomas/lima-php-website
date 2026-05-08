@@ -1,0 +1,31 @@
+.skip-link {
+    position: absolute;
+    left: 1rem;
+    top: -4rem;
+    padding: 0.75rem 1rem;
+    border-radius: 999px;
+    background: #fff;
+    color: #111;
+    z-index: 20;
+
+    &:focus {
+        top: 1rem;
+    }
+}
+
+.site-shell {
+    position: relative;
+    overflow: clip;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+            linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+        background-size: 72px 72px;
+        mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7), transparent 86%);
+        pointer-events: none;
+    }
+}
