@@ -245,7 +245,7 @@ $schema = [
 
             <section class="section">
                 <div class="container cta-panel">
-                    <div>
+                    <div class="cta-content">
                         <p class="eyebrow">Learn Lima faster</p>
                         <h2>Documentation is where curiosity turns into adoption.</h2>
                         <p>Developers evaluating a framework want a short path from interest to understanding. Send them straight to the official docs and keep that journey friction-free.</p>

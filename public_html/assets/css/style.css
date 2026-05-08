@@ -92,6 +92,10 @@ p:last-child {
 .button:hover::before, .button:focus-visible::before {
   transform: translateX(0);
 }
+.button .icon {
+  width: 1.3rem;
+  height: 1.3rem;
+}
 
 .button-primary {
   color: #120e10;
@@ -453,6 +457,17 @@ code {
   gap: 1.5rem;
   padding: 1.6rem;
   background: radial-gradient(circle at right top, rgba(210, 255, 99, 0.18), transparent 26%), rgba(13, 20, 39, 0.82);
+}
+.cta-panel .cta-content {
+  width: 80%;
+}
+@media screen and (max-width: 760px) {
+  .cta-panel .cta-content {
+    width: 100%;
+  }
+}
+.cta-panel .button-primary {
+  white-space: nowrap;
 }
 
 .faq-list {

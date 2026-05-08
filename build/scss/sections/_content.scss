@@ -33,6 +33,10 @@
         letter-spacing: -0.05em;
     }
 
+    p {
+        max-width: 86ch;
+    }
+
     p:last-child {
         margin: 1rem 0 0;
     }
@@ -95,6 +99,18 @@
     gap: 1.5rem;
     padding: 1.6rem;
     background: radial-gradient(circle at right top, rgba(210, 255, 99, 0.18), transparent 26%), $color-surface;
+
+    .cta-content {
+        width: 80%;
+
+        @media screen and (max-width: 760px) {
+            width: 100%;
+        }
+    }
+
+    .button-primary {
+        white-space: nowrap;
+    }
 }
 
 .faq-list {
