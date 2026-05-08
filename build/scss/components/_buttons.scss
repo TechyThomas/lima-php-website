@@ -1,10 +1,12 @@
 @use "../abstracts/variables" as *;
 
 .button {
+    position: relative;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 0.6rem;
+    overflow: hidden;
     padding: 0.9rem 1.2rem;
     border-radius: 999px;
     border: 1px solid transparent;
@@ -12,11 +14,29 @@
     transition:
         transform 0.2s ease,
         border-color 0.2s ease,
-        background-color 0.2s ease;
+        background-color 0.2s ease,
+        color 0.2s ease;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        background: linear-gradient(120deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.02));
+        transform: translateX(-105%);
+        transition: transform 0.35s ease;
+    }
+
+    > * {
+        position: relative;
+        z-index: 1;
+    }
 
     &:hover,
     &:focus-visible {
-        transform: translateY(-1px);
+        &::before {
+            transform: translateX(0);
+        }
     }
 }
 
@@ -24,10 +44,18 @@
     color: #120e10;
     background: linear-gradient(135deg, $color-accent, #fff292);
     box-shadow: 0 16px 40px rgba(210, 255, 99, 0.18);
+
+    &::before {
+        background: linear-gradient(120deg, rgba(255, 107, 87, 0.18), rgba(255, 61, 122, 0.72) 55%, rgba(255, 166, 77, 0.28));
+    }
 }
 
 .button-secondary,
 .button-ghost {
     background: rgba(255, 255, 255, 0.03);
     border-color: rgba(255, 255, 255, 0.12);
+
+    &::before {
+        background: linear-gradient(120deg, rgba(87, 227, 196, 0.22), rgba(255, 107, 87, 0.16));
+    }
 }
