@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Lima PHP framework card</title>
+  <desc id="desc">Promotional Open Graph image for the Lima PHP framework website.</desc>
+  <defs>
+    <linearGradient id="hero" x1="72" y1="64" x2="1100" y2="590" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ff6b57"/>
+      <stop offset="0.45" stop-color="#ffd166"/>
+      <stop offset="1" stop-color="#57e3c4"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="770" y1="120" x2="1090" y2="470" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#131d39"/>
+      <stop offset="1" stop-color="#0b1020"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#0b1020"/>
+  <circle cx="170" cy="100" r="180" fill="#ff6b57" opacity="0.17"/>
+  <circle cx="1080" cy="100" r="140" fill="#57e3c4" opacity="0.14"/>
+  <g opacity="0.1" stroke="#ffffff">
+    <path d="M0 120h1200M0 240h1200M0 360h1200M0 480h1200"/>
+    <path d="M120 0v630M240 0v630M360 0v630M480 0v630M600 0v630M720 0v630M840 0v630M960 0v630M1080 0v630"/>
+  </g>
+  <rect x="700" y="115" width="390" height="330" rx="32" fill="url(#panel)" stroke="#ffffff" stroke-opacity="0.18"/>
+  <g fill="#fff">
+    <circle cx="740" cy="148" r="8" fill="#ff6b57"/>
+    <circle cx="766" cy="148" r="8" fill="#ffd166"/>
+    <circle cx="792" cy="148" r="8" fill="#57e3c4"/>
+  </g>
+  <text x="96" y="170" fill="#57e3c4" font-family="Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="5">MODERN PHP MVC FRAMEWORK</text>
+  <text x="96" y="298" fill="#edf2ff" font-family="Arial, sans-serif" font-size="88" font-weight="700">Lima gives</text>
+  <text x="96" y="388" fill="#edf2ff" font-family="Arial, sans-serif" font-size="88" font-weight="700">developers</text>
+  <text x="96" y="478" fill="#edf2ff" font-family="Arial, sans-serif" font-size="88" font-weight="700">clean momentum.</text>
+  <text x="96" y="554" fill="#afbbd8" font-family="Arial, sans-serif" font-size="32">Routing, controllers, views, and optional Twig support for developers who want structure without ceremony.</text>
+  <path d="M783 218h208" stroke="#d2ff63" stroke-linecap="round" stroke-width="8"/>
+  <path d="M783 258h150" stroke="#57e3c4" stroke-linecap="round" stroke-width="8"/>
+  <path d="M783 316h92" stroke="#ff6b57" stroke-linecap="round" stroke-width="8"/>
+  <rect x="776" y="364" width="233" height="28" rx="14" fill="#16213f"/>
+  <rect x="776" y="404" width="168" height="28" rx="14" fill="#16213f"/>
+  <rect x="928" y="404" width="81" height="28" rx="14" fill="#1f3057"/>
+  <path d="M786 516V248c0-28.719 23.281-52 52-52" fill="none" stroke="url(#hero)" stroke-linecap="round" stroke-linejoin="round" stroke-width="22"/>
+  <circle cx="1005" cy="516" r="16" fill="#d2ff63"/>
+</svg>
