@@ -31,6 +31,12 @@ img {
     display: block;
 }
 
+p {
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
 .container {
     width: min(calc(100% - 2rem), $container);
     margin: 0 auto;
