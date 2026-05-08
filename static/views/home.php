@@ -190,9 +190,18 @@ $schema = [
 
             <section class="trust-strip" aria-label="Framework summary">
                 <div class="container trust-grid">
-                    <p><strong><?= e($packageName); ?></strong> keeps Lima composer-first and easy to integrate.</p>
-                    <p>Use plain PHP templates for speed or switch to Twig when the project benefits from it.</p>
-                    <p>Built for developers who care about readable structure, fast iteration, and maintainable MVC code.</p>
+                    <article class="trust-card">
+                        <div class="trust-icon"><?= lucide_icon('package'); ?></div>
+                        <p><strong><?= e($packageName); ?></strong> keeps Lima composer-first and easy to integrate.</p>
+                    </article>
+                    <article class="trust-card">
+                        <div class="trust-icon"><?= lucide_icon('sparkles'); ?></div>
+                        <p>Use plain PHP templates for speed or switch to Twig when the project benefits from it.</p>
+                    </article>
+                    <article class="trust-card">
+                        <div class="trust-icon"><?= lucide_icon('layers'); ?></div>
+                        <p>Built for developers who care about readable structure, fast iteration, and maintainable MVC code.</p>
+                    </article>
                 </div>
             </section>
 

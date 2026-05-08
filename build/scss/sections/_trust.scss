@@ -6,10 +6,33 @@
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1rem;
+}
 
-    p {
-        margin: 0;
-        padding: 1rem 1.1rem;
-        border-top: 1px solid rgba(255, 255, 255, 0.08);
+.trust-card {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+    align-items: start;
+    margin: 0;
+    padding: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.trust-icon {
+    display: inline-grid;
+    place-items: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 16px;
+    background: linear-gradient(135deg, rgba(255, 107, 87, 0.18), rgba(87, 227, 196, 0.16));
+    color: #d2ff63;
+
+    .icon {
+        width: 1.5rem;
+        height: 1.5rem;
     }
+}
+
+.trust-card p {
+    margin: 0;
 }
