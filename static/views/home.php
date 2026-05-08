@@ -115,7 +115,6 @@ $schema = [
                 <nav class="nav-links" aria-label="Primary">
                     <a href="#why-lima">Why Lima</a>
                     <a href="#developer-flow">Developer Flow</a>
-                    <a href="#faq">FAQ</a>
                     <a class="button button-secondary" href="<?php echo e($docsUrl); ?>" target="_blank" rel="noopener noreferrer">
                         <?php echo lucide_icon('book-open'); ?>
                         <span>Read docs</span>
@@ -139,10 +138,10 @@ $schema = [
                                 <?php echo lucide_icon('book-open'); ?>
                                 <span>Explore the documentation</span>
                             </a>
-                            <a class="button button-ghost" href="#code-sample">
+                            <!-- <a class="button button-ghost" href="#code-sample">
                                 <?php echo lucide_icon('arrow-right'); ?>
                                 <span>See the workflow</span>
-                            </a>
+                            </a> -->
                         </div>
                         <div class="hero-meta" aria-label="Framework quick facts">
                             <?php foreach ($highlights as $highlight): ?>
@@ -256,23 +255,6 @@ $schema = [
                     </a>
                 </div>
             </section>
-
-            <section class="section section-faq" id="faq">
-                <div class="container">
-                    <div class="section-heading compact">
-                        <p class="eyebrow">Questions developers ask</p>
-                        <h2>Answer the adoption blockers before they slow momentum.</h2>
-                    </div>
-                    <div class="faq-list">
-                        <?php foreach ($faqs as $faq): ?>
-                            <details class="faq-item">
-                                <summary><?php echo e($faq['question'] ?? ''); ?></summary>
-                                <p><?php echo e($faq['answer'] ?? ''); ?></p>
-                            </details>
-                        <?php endforeach; ?>
-                    </div>
-                </div>
-            </section>
         </main>
 
         <footer class="site-footer">
@@ -287,7 +269,6 @@ $schema = [
                 <div class="footer-links">
                     <a href="<?php echo e($docsUrl); ?>" target="_blank" rel="noopener noreferrer">Documentation</a>
                     <a href="#why-lima">Why Lima</a>
-                    <a href="#faq">FAQ</a>
                 </div>
             </div>
         </footer>
