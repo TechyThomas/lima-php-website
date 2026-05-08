@@ -173,4 +173,23 @@ $view->get_header();
                     </a>
                 </div>
             </section>
-<?php $view->get_footer(); ?>
+
+            <section class="section section-faq" id="faq">
+                <div class="container">
+                    <div class="section-heading compact">
+                        <p class="eyebrow">Questions developers ask</p>
+                        <h2>Answer the adoption blockers before they slow momentum.</h2>
+                    </div>
+                    <div class="faq-list">
+                        <?php foreach ($faqs as $faq): ?>
+                            <details class="faq-item">
+                                <summary><?php echo e($faq['question'] ?? ''); ?></summary>
+                                <p><?php echo e($faq['answer'] ?? ''); ?></p>
+                            </details>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <?php $view->get_footer(); ?>
