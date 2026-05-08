@@ -126,10 +126,13 @@ $schema = [
 
         <main id="main-content">
             <section class="hero">
-                <div class="container hero-grid">
-                    <div class="hero-copy">
+                <div class="container hero-layout">
+                    <div class="hero-intro">
                         <p class="eyebrow">Modern PHP MVC framework</p>
                         <h1>Ship structured PHP applications without dragging developers through framework ceremony.</h1>
+                    </div>
+                    <div class="hero-grid">
+                        <div class="hero-copy">
                         <p class="hero-text">Lima is built for developers who want a clean MVC workflow, familiar PHP patterns, and the freedom to render with PHP or Twig. It keeps the path from idea to shipped product clear, fast, and enjoyable.</p>
                         <div class="hero-actions">
                             <a class="button button-primary" href="<?= e($docsUrl); ?>" target="_blank" rel="noopener noreferrer">
@@ -152,35 +155,36 @@ $schema = [
                                 </article>
                             <?php endforeach; ?>
                         </div>
-                    </div>
-
-                    <aside class="hero-panel" id="code-sample" aria-label="Example Lima workflow">
-                        <div class="panel-window">
-                            <div class="panel-topbar">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                            <div class="terminal-block">
-                                <p class="panel-label"><?= lucide_icon('terminal'); ?><span>Install</span></p>
-                                <pre><code><?= e($codeSamples['install'] ?? 'composer require spacecow/lima-mvc'); ?></code></pre>
-                            </div>
-                            <div class="code-columns">
-                                <section>
-                                    <p class="panel-label"><?= lucide_icon('signpost'); ?><span>Routes</span></p>
-                                    <pre><code><?= e($codeSamples['route'] ?? ''); ?></code></pre>
-                                </section>
-                                <section>
-                                    <p class="panel-label"><?= lucide_icon('code'); ?><span>Controller</span></p>
-                                    <pre><code><?= e($codeSamples['controller'] ?? ''); ?></code></pre>
-                                </section>
-                            </div>
-                            <div class="terminal-block">
-                                <p class="panel-label"><?= lucide_icon('sparkles'); ?><span>Twig or PHP views</span></p>
-                                <pre><code><?= e($codeSamples['view'] ?? ''); ?></code></pre>
-                            </div>
                         </div>
-                    </aside>
+
+                        <aside class="hero-panel" id="code-sample" aria-label="Example Lima workflow">
+                            <div class="panel-window">
+                                <div class="panel-topbar">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="terminal-block">
+                                    <p class="panel-label"><?= lucide_icon('terminal'); ?><span>Install</span></p>
+                                    <pre><code><?= e($codeSamples['install'] ?? 'composer require spacecow/lima-mvc'); ?></code></pre>
+                                </div>
+                                <div class="code-columns">
+                                    <section>
+                                        <p class="panel-label"><?= lucide_icon('signpost'); ?><span>Routes</span></p>
+                                        <pre><code><?= e($codeSamples['route'] ?? ''); ?></code></pre>
+                                    </section>
+                                    <section>
+                                        <p class="panel-label"><?= lucide_icon('code'); ?><span>Controller</span></p>
+                                        <pre><code><?= e($codeSamples['controller'] ?? ''); ?></code></pre>
+                                    </section>
+                                </div>
+                                <div class="terminal-block">
+                                    <p class="panel-label"><?= lucide_icon('sparkles'); ?><span>Twig or PHP views</span></p>
+                                    <pre><code><?= e($codeSamples['view'] ?? ''); ?></code></pre>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
                 </div>
             </section>
 
