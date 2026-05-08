@@ -2,12 +2,17 @@
     .hero-grid,
     .split-section,
     .pillar-grid,
-    .trust-grid {
+    .trust-grid,
+    .docs-layout {
         grid-template-columns: 1fr;
     }
 
     .hero-intro {
         max-width: 100%;
+    }
+
+    .docs-sidebar-wrap {
+        position: static;
     }
 }
 

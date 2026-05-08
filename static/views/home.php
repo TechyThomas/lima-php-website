@@ -115,6 +115,7 @@ $schema = [
                 <nav class="nav-links" aria-label="Primary">
                     <a href="#why-lima">Why Lima</a>
                     <a href="#developer-flow">Developer Flow</a>
+                    <a href="/docs">Docs</a>
                     <a class="button button-secondary" href="<?php echo e($docsUrl); ?>" target="_blank" rel="noopener noreferrer">
                         <?php echo lucide_icon('book-open'); ?>
                         <span>Read docs</span>
