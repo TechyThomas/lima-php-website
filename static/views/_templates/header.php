@@ -75,7 +75,7 @@ $schema = $schema ?? [
                     <img src="/assets/images/logo-mark.svg" width="40" height="40" alt="">
                     <span>Lima PHP</span>
                 </a>
-                <nav class="nav-links" aria-label="Primary">
+                <nav class="nav-links nav-links-desktop" aria-label="Primary">
                     <a href="#why-lima">Why Lima</a>
                     <a href="#developer-flow">Developer Flow</a>
                     <a href="#faq">FAQ</a>
@@ -84,6 +84,34 @@ $schema = $schema ?? [
                         <span>Read docs</span>
                     </a>
                 </nav>
+                <div class="site-menu">
+                    <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-navigation">
+                        <span class="menu-toggle-label">Menu</span>
+                        <span class="menu-toggle-icon" aria-hidden="true">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </button>
+                    <button class="menu-backdrop" type="button" aria-label="Close navigation" tabindex="-1"></button>
+                    <div class="mobile-flyout" id="mobile-navigation" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+                        <div class="mobile-flyout-header">
+                            <span class="mobile-flyout-title">Navigate</span>
+                            <button class="menu-close" type="button" aria-label="Close navigation">
+                                <?php echo lucide_icon('x'); ?>
+                            </button>
+                        </div>
+                        <nav class="nav-links nav-links-mobile" aria-label="Primary">
+                            <a href="#why-lima">Why Lima</a>
+                            <a href="#developer-flow">Developer Flow</a>
+                            <a href="#faq">FAQ</a>
+                            <a class="button button-secondary" href="<?php echo e($docsUrl); ?>" target="_blank" rel="noopener noreferrer">
+                                <?php echo lucide_icon('book-open'); ?>
+                                <span>Read docs</span>
+                            </a>
+                        </nav>
+                    </div>
+                </div>
             </div>
         </header>
 

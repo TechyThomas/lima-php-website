@@ -30,6 +30,7 @@ if (!function_exists('lucide_icon')) {
             'signpost' => '<path d="M12 13v8"/><path d="M12 3v3"/><path d="M18 6H8l-2 3 2 3h10l2-3Z"/><path d="M6 12H4l-2 3 2 3h8"/>',
             'sparkles' => '<path d="M12 3l1.5 4.5L18 9l-4.5 1.5L12 15l-1.5-4.5L6 9l4.5-1.5Z"/><path d="M5 3v4"/><path d="M3 5h4"/><path d="M19 16v5"/><path d="M16.5 18.5h5"/>',
             'terminal' => '<path d="M4 17 10 11 4 5"/><path d="M12 19h8"/>',
+            'x' => '<path d="M18 6 6 18"/><path d="m6 6 12 12"/>',
         ];
 
         $paths = $icons[$icon] ?? $icons['code'];
