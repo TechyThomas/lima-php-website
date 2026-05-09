@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-$page = $page ?? [];
+$page = $data['page'] ?? [];
 $title = $page['title'] ?? 'Lima PHP Framework';
 $description = $page['description'] ?? 'Lima is a PHP MVC framework.';
 $canonical = $page['canonical'] ?? '/';
