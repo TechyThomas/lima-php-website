@@ -8,7 +8,7 @@ use Lima\Core\Controller;
 
 class Home extends Controller {
     public function index() {
-        $siteUrl = rtrim($_ENV['SITE_URL'] ?? '', '/');
+        $siteUrl = rtrim($_ENV['SITE_URL'] ?? $this->detectSiteUrl(), '/');
         $docsUrl = 'https://docs.limaphp.com';
 
         $page = [
@@ -115,5 +115,26 @@ class Home extends Controller {
             'faqs' => $faqs,
             'codeSamples' => $codeSamples,
         ]);
+    }
+
+    private function detectSiteUrl(): string
+    {
+        $host = $_SERVER['HTTP_HOST'] ?? '';
+
+        if ($host === '') {
+            return '';
+        }
+
+        $scheme = 'http';
+
+        if (
+            (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off')
+            || (isset($_SERVER['SERVER_PORT']) && (int) $_SERVER['SERVER_PORT'] === 443)
+            || (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https')
+        ) {
+            $scheme = 'https';
+        }
+
+        return $scheme . '://' . $host;
     }
 }
