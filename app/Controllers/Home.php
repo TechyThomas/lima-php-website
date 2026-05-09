@@ -8,7 +8,7 @@ use Lima\Core\Controller;
 
 class Home extends Controller {
     public function index() {
-        $siteUrl = rtrim($_ENV['SITE_URL'] ?? $this->detectSiteUrl(), '/');
+        $siteUrl = rtrim($_ENV['SITE_URL'], '/');
         $docsUrl = 'https://docs.limaphp.com';
 
         $page = [
