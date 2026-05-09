@@ -22,6 +22,7 @@ if (!function_exists('lucide_icon')) {
         $icons = [
             'arrow-right' => '<path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>',
             'book-open' => '<path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>',
+            'chevron-down' => '<path d="m6 9 6 6 6-6"/>',
             'code' => '<path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/><path d="m14.5 4-5 16"/>',
             'layers' => '<path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5"/><path d="m3 16 9 5 9-5"/>',
             'monitor' => '<rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/>',
@@ -184,7 +185,10 @@ $view->get_header();
                     <div class="faq-list">
                         <?php foreach ($faqs as $faq): ?>
                             <details class="faq-item">
-                                <summary><?php echo e($faq['question'] ?? ''); ?></summary>
+                                <summary>
+                                    <span><?php echo e($faq['question'] ?? ''); ?></span>
+                                    <span class="faq-toggle-icon" aria-hidden="true"><?php echo lucide_icon('chevron-down'); ?></span>
+                                </summary>
                                 <p><?php echo e($faq['answer'] ?? ''); ?></p>
                             </details>
                         <?php endforeach; ?>

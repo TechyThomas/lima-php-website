@@ -126,6 +126,10 @@
     padding: 1.15rem 1.25rem;
 
     summary {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
         cursor: pointer;
         list-style: none;
         font-weight: 700;
@@ -137,6 +141,34 @@
 
     p {
         margin: 0.8rem 0 0;
+    }
+
+    &[open] {
+        .faq-toggle-icon {
+            transform: rotate(180deg);
+            border-color: rgba(210, 255, 99, 0.38);
+            background: rgba(210, 255, 99, 0.08);
+            color: $color-accent;
+        }
+    }
+}
+
+.faq-toggle-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    flex: 0 0 auto;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.03);
+    color: $color-text-soft;
+    transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+
+    .icon {
+        width: 1rem;
+        height: 1rem;
     }
 }
 
