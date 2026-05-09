@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-$page = $page ?? [];
-$highlights = $highlights ?? $page['highlights'] ?? [];
-$pillars = $pillars ?? $page['pillars'] ?? [];
-$workflow = $workflow ?? $page['workflow'] ?? [];
-$faqs = $faqs ?? $page['faqs'] ?? [];
-$codeSamples = $codeSamples ?? $page['codeSamples'] ?? [];
+$page = $page ?? $data['page'] ?? [];
+$highlights = $highlights ?? $data['highlights'] ?? [];
+$pillars = $pillars ?? $data['pillars'] ?? [];
+$workflow = $workflow ?? $data['workflow'] ?? [];
+$faqs = $faqs ?? $data['faqs'] ?? [];
+$codeSamples = $codeSamples ?? $data['codeSamples'] ?? [];
 
 if (!function_exists('e')) {
     function e(string $value): string
