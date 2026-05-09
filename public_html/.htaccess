@@ -14,19 +14,21 @@ RewriteRule .* - [e=HTTP_AUTHORIZATION:%1]
 
 RewriteBase /
 
+# Allow requests on www and canonicalise them to the root domain.
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+
 # Trailing slashes: external 308 only for GET/HEAD (SEO/canonical URL).
 # POST/PUT/PATCH/DELETE/OPTIONS through fetch + Cloudflare often fail on 308 (body/CORS/proxy quirks).
 # Other methods: front controller in one step (no redirect). Rewriting only to /path can fail the
 # rule block below after REDIRECT_STATUS is set on the second internal pass.
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_URI} ^/(.+)/$
 RewriteCond %{REQUEST_METHOD} ^(GET|HEAD)$
-RewriteRule ^ /%1 [L,R=308]
+RewriteRule ^(.+)/$ /$1 [L,R=308]
 
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_URI} ^/(.+)/$
 RewriteCond %{REQUEST_METHOD} !^(GET|HEAD)$
-RewriteRule ^ index.php?url=%1 [L,QSA]
+RewriteRule ^(.+)/$ index.php?url=$1 [L,QSA]
 
 # Rewrite sitemap.xml to Sitemap controller
 RewriteRule ^sitemap\.xml$ index.php?url=sitemap [L]
