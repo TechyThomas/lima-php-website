@@ -3,11 +3,11 @@
 declare(strict_types=1);
 
 $page = $page ?? [];
-$highlights = $highlights ?? [];
-$pillars = $pillars ?? [];
-$workflow = $workflow ?? [];
-$faqs = $faqs ?? [];
-$codeSamples = $codeSamples ?? [];
+$highlights = $highlights ?? $page['highlights'] ?? [];
+$pillars = $pillars ?? $page['pillars'] ?? [];
+$workflow = $workflow ?? $page['workflow'] ?? [];
+$faqs = $faqs ?? $page['faqs'] ?? [];
+$codeSamples = $codeSamples ?? $page['codeSamples'] ?? [];
 
 if (!function_exists('e')) {
     function e(string $value): string
