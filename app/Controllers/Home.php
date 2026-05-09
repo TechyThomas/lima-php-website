@@ -88,7 +88,7 @@ class Home extends Controller {
             ],
             [
                 'question' => 'Can Lima render Twig templates?',
-                'answer' => 'Yes. Lima can render standard PHP views, and it also supports Twig when Twig is available in the project.',
+                'answer' => 'Yes. Lima can render standard PHP views, and it also supports Twig when Twig is available in the project. To enable support, all you need to do is install the Twig composer package. Lima will auto detect it and allow serving of Twig templates.',
             ],
             [
                 'question' => 'How do I learn the framework quickly?',
