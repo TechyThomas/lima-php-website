@@ -46,7 +46,8 @@
 }
 
 .terminal-block + .code-columns,
-.code-columns + .terminal-block {
+.code-columns + .terminal-block,
+.terminal-block + .terminal-block {
     margin-top: 1rem;
 }
 
@@ -74,6 +75,7 @@ pre {
     color: #f8fbff;
     font-size: 0.92rem;
     line-height: 1.55;
+    white-space: normal;
 }
 
 code {

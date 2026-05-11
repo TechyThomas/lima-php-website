@@ -1,4 +1,9 @@
 {
+    "autoload": {
+        "psr-4": {
+            "LimaSite\\": "app/"
+        }
+    },
     "require": {
         "spacecow/lima-mvc": "^1.0"
     }

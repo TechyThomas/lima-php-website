@@ -1,0 +1,22 @@
+[
+    {
+        "label": "Routing + Controllers",
+        "copy": "Keep request handling deliberate, readable, and easy to extend.",
+        "icon": "signpost"
+    },
+    {
+        "label": "Twig Support",
+        "copy": "Render with plain PHP or reach for Twig when your team wants template ergonomics.",
+        "icon": "sparkles"
+    },
+    {
+        "label": "Composer Package",
+        "copy": "Install Lima with Composer and slot it into a workflow PHP developers already know.",
+        "icon": "package"
+    },
+    {
+        "label": "MVC Without Bloat",
+        "copy": "Bring structure to your project without drowning simple ideas in ceremony.",
+        "icon": "layers"
+    }
+]
