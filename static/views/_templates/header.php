@@ -44,6 +44,12 @@ $schema = $schema ?? [
     <meta name="theme-color" content="#0b1020">
     <link rel="canonical" href="<?php echo e($canonical); ?>">
     <link rel="icon" href="/assets/images/logo-mark.svg" type="image/svg+xml">
+    <link rel="icon" type="image/x-icon" href="/assets/images/icon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icon/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/icon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/images/icon/android-chrome-512x512.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="/assets/css/style.css" as="style">
