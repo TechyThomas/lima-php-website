@@ -5,6 +5,7 @@
         }
     },
     "require": {
-        "spacecow/lima-mvc": "^1.0"
+        "spacecow/lima-mvc": "^1.0",
+        "erusev/parsedown": "^1.8"
     }
 }
