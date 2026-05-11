@@ -46,7 +46,8 @@
 }
 
 .terminal-block + .code-columns,
-.code-columns + .terminal-block {
+.code-columns + .terminal-block,
+.terminal-block + .terminal-block {
     margin-top: 1rem;
 }
 

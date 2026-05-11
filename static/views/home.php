@@ -101,6 +101,10 @@ $view->get_header();
                                     <p class="panel-label"><?php echo lucide_icon('terminal'); ?><span>Install the Framework</span></p>
                                     <pre><code><?php echo e($codeSamples['install'] ?? 'composer require spacecow/lima-mvc'); ?></code></pre>
                                 </div>
+                                <div class="terminal-block">
+                                    <p class="panel-label"><?php echo lucide_icon('terminal'); ?><span>Install the starter project</span></p>
+                                    <pre><code><?php echo 'composer create-project spacecow/lima-mvc-starter my-project'; ?></code></pre>
+                                </div>
                             </div>
                         </aside>
                     </div>
