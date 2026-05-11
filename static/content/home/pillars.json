@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Build with momentum",
+        "copy": "Lima gives developers a predictable MVC flow so you can move from route to controller to view without hunting through abstraction layers.",
+        "icon": "rocket"
+    },
+    {
+        "title": "Stay close to PHP",
+        "copy": "Use familiar PHP patterns, keep your code approachable, and add Twig only when it genuinely improves the developer experience.",
+        "icon": "code"
+    },
+    {
+        "title": "Ship polished products",
+        "copy": "The framework is a strong fit for landing pages, internal tools, client projects, and websites that need clear structure and quick iteration.",
+        "icon": "monitor"
+    }
+]

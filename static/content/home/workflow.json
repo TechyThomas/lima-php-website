@@ -1,0 +1,17 @@
+[
+    {
+        "step": "Install",
+        "title": "Bring Lima in with Composer",
+        "copy": "Start with a package PHP developers already understand, then shape the project around your routes, controllers, and views."
+    },
+    {
+        "step": "Organise",
+        "title": "Keep your MVC layers intentional",
+        "copy": "Controllers stay focused, templates stay readable, and your directory structure tells a clear story to the next developer."
+    },
+    {
+        "step": "Render",
+        "title": "Choose PHP templates or Twig",
+        "copy": "Stay lean with PHP views or use Twig when your team wants reusable templating conventions and presentation guardrails."
+    }
+]
