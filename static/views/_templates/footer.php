@@ -13,7 +13,7 @@
                     <a href="<?php echo e($docsUrl ?? 'https://docs.limaphp.com'); ?>" target="_blank" rel="noopener noreferrer">Documentation</a>
                     <a href="#why-lima">Why Lima</a>
                     <a href="#faq">FAQ</a>
-                    <a href="https://github.com/TechyThomas/lima-mvc" target="_blank">GitHub</a>
+                    <a href="https://github.com/TechyThomas/lima-php-website" target="_blank">GitHub</a>
                 </div>
             </div>
         </footer>
