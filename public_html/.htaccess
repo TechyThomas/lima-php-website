@@ -9,35 +9,17 @@ Options -Indexes
 
 # Enable rewrites
 RewriteEngine on
-RewriteCond %{HTTP:Authorization} ^(.*)
-RewriteRule .* - [e=HTTP_AUTHORIZATION:%1]
-
 RewriteBase /
 
-# Allow requests on www and canonicalise them to the root domain.
-RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
-RewriteRule ^ %{REQUEST_SCHEME}://%1%{REQUEST_URI} [R=301,L,END,NE]
-
-# Trailing slashes: external 308 only for GET/HEAD (SEO/canonical URL).
-# POST/PUT/PATCH/DELETE/OPTIONS through fetch + Cloudflare often fail on 308 (body/CORS/proxy quirks).
-# Other methods: front controller in one step (no redirect). Rewriting only to /path can fail the
-# rule block below after REDIRECT_STATUS is set on the second internal pass.
+# Redirect trailing slashes (preserving request method)
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_METHOD} ^(GET|HEAD)$
-RewriteRule ^(.+)/$ /$1 [L,R=308]
+RewriteCond %{REQUEST_URI} (.+)/$
+RewriteRule ^ %1 [L,R=308]
 
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_METHOD} !^(GET|HEAD)$
-RewriteRule ^(.+)/$ index.php?url=$1 [L,QSA]
-
-# Rewrite sitemap.xml to Sitemap controller
-RewriteRule ^sitemap\.xml$ index.php?url=sitemap [L]
-
-# Rewrite everything except for assets to index.php (always rewrite /uploads so controller can serve)
+# Rewrite everything except for assets to index.php
 RewriteCond %{ENV:REDIRECT_STATUS} ^$
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-l
-RewriteCond %{REQUEST_URI} ^/uploads(/|$) [OR]
 RewriteCond %{REQUEST_URI} !.*\.(ico|gif|jpg|jpeg|png|js|css|svg)
 RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
