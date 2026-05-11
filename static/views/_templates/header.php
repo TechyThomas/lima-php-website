@@ -54,7 +54,7 @@ $schema = $schema ?? [
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="/assets/css/style.css" as="style">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=<?php echo e(str_replace(' ', '+', $fontFamily)); ?>:wght@400;500;600;700&display=swap">
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css?v=<?php echo filemtime(LIMA_ROOT . '/public_html/assets/css/style.css'); ?>">
 
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="<?php echo e($siteName); ?>">
