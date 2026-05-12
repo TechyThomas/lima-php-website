@@ -18,6 +18,6 @@
             </div>
         </footer>
     </div>
-    <script src="/assets/js/site.js" defer></script>
+    <script src="/assets/js/site.min.js?v=<?php echo filemtime(LIMA_ROOT . '/public_html/assets/js/site.min.js'); ?>" defer></script>
 </body>
 </html>

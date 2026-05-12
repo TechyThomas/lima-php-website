@@ -2,10 +2,13 @@
     "name": "lima-website",
     "private": true,
     "scripts": {
-        "build": "sass build/scss/style.scss public_html/assets/css/style.css --style=compressed --no-source-map",
+        "build": "sass build/scss/style.scss public_html/assets/css/style.css --style=compressed --no-source-map && npm run js:build",
+        "js:build": "webpack --config webpack.config.js",
         "watch": "sass --watch build/scss/style.scss:public_html/assets/css/style.css --style=expanded --no-source-map"
     },
     "devDependencies": {
-        "sass": "^1.89.0"
+        "sass": "^1.89.0",
+        "webpack": "^5.0.0",
+        "webpack-cli": "^6.0.0"
     }
 }
