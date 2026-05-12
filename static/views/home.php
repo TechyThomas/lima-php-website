@@ -140,7 +140,7 @@ $view->get_header();
             <h2>Documentation is where curiosity turns into adoption.</h2>
             <p>Developers evaluating a framework want a short path from interest to understanding. Send them straight to the official docs and keep that journey friction-free.</p>
         </div>
-        <a class="button button-primary" href="<?php echo e($docsUrl); ?>" target="_blank" rel="noopener noreferrer">
+        <a class="button button-primary" href="<?php echo e($docsUrl); ?>">
             <?php echo lucide_icon('book-open'); ?>
             <span>Open the docs</span>
         </a>
