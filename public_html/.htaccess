@@ -16,6 +16,9 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_URI} (.+)/$
 RewriteRule ^ %1 [L,R=308]
 
+# Redirect sitemap to static controller
+RewriteRule ^sitemap\.xml$ index.php?url=sitemap/index [L]
+
 # Redirect all docs urls to index function to allow for dynamic slugs
 RewriteRule ^docs/(.*)$ index.php?url=docs/index/$1 [QSA,L]
 
