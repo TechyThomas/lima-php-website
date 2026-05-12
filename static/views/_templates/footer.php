@@ -10,7 +10,7 @@
                     <p>Website proudly powered by Lima, the developer focused framework.</p>
                 </div>
                 <div class="footer-links">
-                    <a href="<?php echo e($docsUrl ?? 'https://docs.limaphp.com'); ?>" target="_blank" rel="noopener noreferrer">Documentation</a>
+                    <a href="/docs">Documentation</a>
                     <a href="#why-lima">Why Lima</a>
                     <a href="#faq">FAQ</a>
                     <a href="https://github.com/TechyThomas/lima-php-website" target="_blank">GitHub</a>

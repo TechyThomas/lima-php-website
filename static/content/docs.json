@@ -1,0 +1,14 @@
+{
+    "about": {
+        "title": "About",
+        "file": "about.md"
+    },
+    "configuration": {
+        "title": "Configuration",
+        "file": "configuration.md"
+    },
+    "getting-started": {
+        "title": "Getting Started",
+        "file": "getting-started.md"
+    }
+}
