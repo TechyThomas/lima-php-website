@@ -1,5 +1,10 @@
 # Configuration
 
+### Contents
+
+- [Environment Variables](#environment-variables)
+
+<a id="environment-variables"></a>
 ### Environment Variables
 
 Out of the box Lima supports numerous configuration options, some of which are required in order to run. Since Lima makes use of the dotenv package, any custom variables you add to your .env file will be available to you via `$_ENV`.

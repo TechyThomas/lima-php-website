@@ -1,5 +1,12 @@
 # Getting Started
 
+### Contents
+
+- [Installing Lima](#installing-lima)
+- [Enabling & Using Lima](#enabling-and-using-lima)
+- [Recommended Folder Structure](#recommended-folder-structure)
+
+<a id="installing-lima"></a>
 ### Installing Lima
 
 The quickest way to start a new Lima project is to use the official composer project template:
@@ -25,6 +32,7 @@ composer require spacecow/lima-mvc
 
 From there you'll need to follow the manual setup below.
 
+<a id="enabling-and-using-lima"></a>
 ### Enabling & Using Lima
 
 To enable Lima within your project, you'll need create a new instance of the Lima App and run it. Within your project's public folder create a file called index.php with the following code:
@@ -73,6 +81,7 @@ RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
 
 Now all requests will be directed to Lima except for any static assets that match the given file extensions. Of course, please adjust this as you need. The index.php rewrite is the most important rule, without this, Lima cannot function.
 
+<a id="recommended-folder-structure"></a>
 ### Recommended Folder Structure
 
 While Lima doesn't require any specific structure _(that's the beauty of it)_, it is recommended to follow a folder structure similar to the following:
