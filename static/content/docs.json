@@ -1,34 +1,82 @@
 {
     "about": {
         "title": "About",
-        "file": "about.md"
+        "file": "about.md",
+        "description": "Learn what Lima MVC is, why it exists, and what features are included in the framework.",
+        "schema": {
+            "@type": "TechArticle",
+            "headline": "About Lima MVC",
+            "description": "Learn what Lima MVC is, why it exists, and what features are included in the framework."
+        }
     },
     "getting-started": {
         "title": "Getting Started",
-        "file": "getting-started.md"
+        "file": "getting-started.md",
+        "description": "Install Lima MVC, create a new project with the starter template, and understand the recommended folder structure.",
+        "schema": {
+            "@type": "TechArticle",
+            "headline": "Getting Started with Lima MVC",
+            "description": "Install Lima MVC, create a new project with the starter template, and understand the recommended folder structure."
+        }
     },
     "configuration": {
         "title": "Configuration",
-        "file": "configuration.md"
+        "file": "configuration.md",
+        "description": "Review the environment variables and configuration options supported by Lima MVC.",
+        "schema": {
+            "@type": "TechArticle",
+            "headline": "Lima MVC Configuration",
+            "description": "Review the environment variables and configuration options supported by Lima MVC."
+        }
     },
     "routing": {
         "title": "Routing",
-        "file": "routing.md"
+        "file": "routing.md",
+        "description": "Learn how Lima routes URLs to controllers, methods, namespaces, parameters, and custom 404 pages.",
+        "schema": {
+            "@type": "TechArticle",
+            "headline": "Routing in Lima MVC",
+            "description": "Learn how Lima routes URLs to controllers, methods, namespaces, parameters, and custom 404 pages."
+        }
     },
     "controllers-and-views": {
         "title": "Controllers and Views",
-        "file": "controllers-and-views.md"
+        "file": "controllers-and-views.md",
+        "description": "Use Lima controllers to handle requests and render PHP or Twig templates with shared view data.",
+        "schema": {
+            "@type": "TechArticle",
+            "headline": "Controllers and Views in Lima MVC",
+            "description": "Use Lima controllers to handle requests and render PHP or Twig templates with shared view data."
+        }
     },
     "models-and-database": {
         "title": "Models and Database",
-        "file": "models-and-database.md"
+        "file": "models-and-database.md",
+        "description": "Work with Lima models, MySQL database queries, collections, items, timestamps, casts, and deletes.",
+        "schema": {
+            "@type": "TechArticle",
+            "headline": "Models and Database in Lima MVC",
+            "description": "Work with Lima models, MySQL database queries, collections, items, timestamps, casts, and deletes."
+        }
     },
     "validation": {
         "title": "Validation",
-        "file": "validation.md"
+        "file": "validation.md",
+        "description": "Validate and sanitize request input in Lima using rules for text, numbers, arrays, email addresses, and matching fields.",
+        "schema": {
+            "@type": "TechArticle",
+            "headline": "Validation in Lima MVC",
+            "description": "Validate and sanitize request input in Lima using rules for text, numbers, arrays, email addresses, and matching fields."
+        }
     },
     "extending-lima": {
         "title": "Extending Lima",
-        "file": "extending-lima.md"
+        "file": "extending-lima.md",
+        "description": "Extend Lima MVC with custom base controllers, view helpers, runtime config, and your own application services.",
+        "schema": {
+            "@type": "TechArticle",
+            "headline": "Extending Lima MVC",
+            "description": "Extend Lima MVC with custom base controllers, view helpers, runtime config, and your own application services."
+        }
     }
 }
