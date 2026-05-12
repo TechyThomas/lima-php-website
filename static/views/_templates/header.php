@@ -8,7 +8,7 @@ $description = $page['description'] ?? 'Lima is a PHP MVC framework.';
 $canonical = $page['canonical'] ?? '/';
 $siteName = $page['site_name'] ?? 'Lima PHP';
 $ogImage = $page['og_image'] ?? '/assets/images/og-card.svg';
-$docsUrl = $page['docs_url'] ?? 'https://docs.limaphp.com';
+$docsUrl = '/docs';
 $fontFamily = $page['font_family'] ?? 'Space Grotesk';
 $schema = $schema ?? [
     '@context' => 'https://schema.org',
@@ -85,7 +85,7 @@ $schema = $schema ?? [
                     <a href="#why-lima">Why Lima</a>
                     <a href="#developer-flow">Developer Flow</a>
                     <a href="#faq">FAQ</a>
-                    <a class="button button-secondary" href="<?php echo e($docsUrl); ?>" target="_blank" rel="noopener noreferrer">
+                    <a class="button button-secondary" href="<?php echo e($docsUrl); ?>">
                         <?php echo lucide_icon('book-open'); ?>
                         <span>Read docs</span>
                     </a>

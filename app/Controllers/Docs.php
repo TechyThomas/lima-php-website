@@ -33,18 +33,23 @@ class Docs extends Controller
         }
 
         $this->view('docs/index', [
-            'docs' => $this->getDocs()
+            'docs' => $this->getDocs(),
+            'page' => [
+                'title' => doc_title('Lima Docs')
+            ]
         ]);
     }
 
     private function getDocPage(string $slug) {
+        $allDocs = $this->getDocs();
+        
         $docsDir = LIMA_ROOT . DIRECTORY_SEPARATOR . 'static' . DIRECTORY_SEPARATOR . 'docs';
         $docFile = $docsDir . DIRECTORY_SEPARATOR . $slug . '.md';
 
         if (!file_exists($docFile)) {
             http_response_code(404);
             $this->view('docs/404', [
-                'docs' => $this->getDocs(),
+                'docs' => $allDocs,
             ]);
             exit;
         }
@@ -54,9 +59,13 @@ class Docs extends Controller
         $markdown = $parsedown->text(file_get_contents($docFile));
 
         $this->view('docs/single', [
-            'docs' => $this->getDocs(),
+            'docs' => $allDocs,
             'content' => $markdown,
-            'current_doc' => $slug
+            'current_doc' => $slug,
+            'page' => [
+                'title' => doc_title($allDocs[$slug]['title'] . ' - Lima Docs'),
+                'canonical' => page_url('docs/' . $slug)
+            ]
         ]);
     }
 }

@@ -57,3 +57,15 @@ if (!function_exists('site_url')) {
         return $scheme . '://' . $host;
     }
 }
+
+if (!function_exists('doc_title')) {
+    function doc_title(string $title) {
+        return "$title | Lima PHP Framework";
+    }
+}
+
+if (!function_exists('page_url')) {
+    function page_url(string $url) {
+        return $_ENV['SITE_URL'] . '/' . ltrim($url, '/');
+    }
+}
