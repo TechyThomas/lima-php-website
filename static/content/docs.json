@@ -3,12 +3,32 @@
         "title": "About",
         "file": "about.md"
     },
+    "getting-started": {
+        "title": "Getting Started",
+        "file": "getting-started.md"
+    },
     "configuration": {
         "title": "Configuration",
         "file": "configuration.md"
     },
-    "getting-started": {
-        "title": "Getting Started",
-        "file": "getting-started.md"
+    "routing": {
+        "title": "Routing",
+        "file": "routing.md"
+    },
+    "controllers-and-views": {
+        "title": "Controllers and Views",
+        "file": "controllers-and-views.md"
+    },
+    "models-and-database": {
+        "title": "Models and Database",
+        "file": "models-and-database.md"
+    },
+    "validation": {
+        "title": "Validation",
+        "file": "validation.md"
+    },
+    "extending-lima": {
+        "title": "Extending Lima",
+        "file": "extending-lima.md"
     }
 }

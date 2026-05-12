@@ -16,7 +16,7 @@
 
         <article class="docs-content">
             <div class="docs-prose">
-                <p>This is where you'll find all documenatation for Lima MVC. Click an area from the sidebar to learn more.</p>
+                <p>This is where you'll find all documentation for Lima MVC. Click an area from the sidebar to learn more.</p>
                 <p><strong><i>Please note that this is a work in progress and is not yet complete.</i></strong></p>
             </div>
         </article>

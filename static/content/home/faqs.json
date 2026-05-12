@@ -17,6 +17,6 @@
     },
     {
         "question": "Is there a starter project I can use?",
-        "answer": "Yes, there is a starter project available on packagist. You can install it using \"composer create-project spacecow/lima-mvc-starter my-project\"."
+        "answer": "Yes, there is a starter project available on Packagist. You can install it using \"composer create-project spacecow/lima-mvc-starter my-project\"."
     }
 ]

@@ -2,13 +2,28 @@
 
 ### Installing Lima
 
-Lima is available as a composer package and can be installed via the regular require command:
+The quickest way to start a new Lima project is to use the official composer project template:
+
+```bash
+composer create-project spacecow/lima-mvc-starter my-project
+```
+
+Composer will install the dependencies as part of the create-project command. If you created the project with `--no-install`, move into your project and run install manually:
+
+```bash
+cd my-project
+composer install
+```
+
+The starter project gives you a ready to use folder structure, a public entry point, and the files Lima expects when it boots. It is the recommended way to begin a new application.
+
+If you're adding Lima to an existing project instead, you can still install the framework package directly:
 
 ```bash
 composer require spacecow/lima-mvc
 ```
 
-From there you'll need to follow the setup below:
+From there you'll need to follow the manual setup below.
 
 ### Enabling & Using Lima
 
@@ -29,7 +44,7 @@ The above code assumes your public folder is in the root of your project. If not
 In addition to the index.php file, you'll also need to ensure the web server routes all requests to Lima. Create a .htaccess file in your public folder with the following:
 
 ```
-# Prevent Directoy listing and browsing
+# Prevent Directory listing and browsing
 Options +FollowSymLinks -MultiViews
 Options -Indexes
 
@@ -60,7 +75,7 @@ Now all requests will be directed to Lima except for any static assets that matc
 
 ### Recommended Folder Structure
 
-While Lima doesn't require any specific structure _(that's the beauty of it)_, it is recommend to follow a folder structure similar to the following:
+While Lima doesn't require any specific structure _(that's the beauty of it)_, it is recommended to follow a folder structure similar to the following:
 
 ```
 project-root
