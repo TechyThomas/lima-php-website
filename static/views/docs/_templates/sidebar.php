@@ -10,7 +10,7 @@
                     </a>
                 <?php endforeach; ?>
             </nav>
-            <a class="button button-primary button-block" href="/" target="_blank" rel="noopener noreferrer">
+            <a class="button button-primary button-block" href="/">
                 <?php echo lucide_icon('house'); ?><span>Back to homepage</span>
             </a>
         </div>
