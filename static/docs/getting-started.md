@@ -78,4 +78,4 @@ project-root
 
 This will work out of the box and is very typical of an MVC system and should be familiar to anyone who has worked with Laravel or CodeIgniter.
 
-Should you wish to use a complete custom structure, you will need to set the appropriate variables within your .env file. See the [Environment Variables](configuration.md?id=environment-variables) page for more information.
+Should you wish to use a complete custom structure, you will need to set the appropriate variables within your .env file. See the [Environment Variables](/docs/configuration) page for more information.

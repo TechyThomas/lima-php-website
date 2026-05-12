@@ -14,6 +14,7 @@ if (!function_exists('lucide_icon')) {
             'arrow-right' => '<path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>',
             'book-open' => '<path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>',
             'chevron-down' => '<path d="m6 9 6 6 6-6"/>',
+            'chevron-right' => '<path d="m9 18 6-6-6-6"/>',
             'code' => '<path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/><path d="m14.5 4-5 16"/>',
             'layers' => '<path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5"/><path d="m3 16 9 5 9-5"/>',
             'monitor' => '<rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/>',
@@ -23,6 +24,8 @@ if (!function_exists('lucide_icon')) {
             'sparkles' => '<path d="M12 3l1.5 4.5L18 9l-4.5 1.5L12 15l-1.5-4.5L6 9l4.5-1.5Z"/><path d="M5 3v4"/><path d="M3 5h4"/><path d="M19 16v5"/><path d="M16.5 18.5h5"/>',
             'terminal' => '<path d="M4 17 10 11 4 5"/><path d="M12 19h8"/>',
             'x' => '<path d="M18 6 6 18"/><path d="m6 6 12 12"/>',
+            'file-text' => '<path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M8 13h8"/><path d="M8 17h8"/><path d="M10 9h1"/>',
+            'house' => '<path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V20a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9.5"/>',
         ];
 
         $paths = $icons[$icon] ?? $icons['code'];

@@ -5,14 +5,58 @@ declare(strict_types=1);
 namespace LimaSite\Controllers;
 
 use Lima\Core\Controller;
+use Parsedown;
 
 class Docs extends Controller
 {
-    public function index(): void
-    {
-        $docsDir = LIMA_ROOT . DIRECTORY_SEPARATOR . 'static' . DIRECTORY_SEPARATOR . 'docs';
+    private function getDocs(): array {
+        $jsonFile = LIMA_ROOT . DIRECTORY_SEPARATOR . 'static' . DIRECTORY_SEPARATOR . 'content' . DIRECTORY_SEPARATOR . 'docs.json';
 
-        $this->view('docs', [
+        if (!file_exists($jsonFile)) {
+            return [];
+        }
+
+        $jsonContents = file_get_contents($jsonFile);
+
+        if (!json_validate($jsonContents)) {
+            return [];
+        }
+
+        return json_decode($jsonContents, true);
+    }
+
+    public function index(string $slug = ''): void
+    {
+        if (!empty($slug)) {
+            $this->getDocPage($slug);
+            exit;
+        }
+
+        $this->view('docs/index', [
+            'docs' => $this->getDocs()
+        ]);
+    }
+
+    private function getDocPage(string $slug) {
+        $docsDir = LIMA_ROOT . DIRECTORY_SEPARATOR . 'static' . DIRECTORY_SEPARATOR . 'docs';
+        $docFile = $docsDir . DIRECTORY_SEPARATOR . $slug . '.md';
+
+        if (!file_exists($docFile)) {
+            http_response_code(404);
+            $this->view('docs/404', [
+                'docs' => $this->getDocs(),
+            ]);
+            exit;
+        }
+
+        $parsedown = new Parsedown();
+
+        $markdown = $parsedown->text(file_get_contents($docFile));
+
+        $this->view('docs/single', [
+            'docs' => $this->getDocs(),
+            'content' => $markdown,
+            'current_doc' => $slug
         ]);
     }
 }
