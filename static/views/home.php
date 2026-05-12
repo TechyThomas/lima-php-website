@@ -13,7 +13,7 @@ $description = $page['description'] ?? 'Lima is a PHP MVC framework.';
 $canonical = $page['canonical'] ?? '/';
 $siteName = $page['site_name'] ?? 'Lima PHP';
 $ogImage = $page['og_image'] ?? '/assets/images/og-card.svg';
-$docsUrl = $page['docs_url'] ?? 'https://docs.limaphp.com';
+$docsUrl = $page['docs_url'] ?? '/docs';
 $packageName = $page['package_name'] ?? 'spacecow/lima-mvc';
 $schema = [
     '@context' => 'https://schema.org',
@@ -50,7 +50,7 @@ $view->get_header();
             <div class="hero-copy">
             <p class="hero-text">Lima is built for developers who want a clean MVC workflow, familiar PHP patterns, and the freedom to render with PHP or Twig. It keeps the path from idea to shipped product clear, fast, and enjoyable.</p>
             <div class="hero-actions">
-                <a class="button button-primary" href="<?php echo e($docsUrl); ?>" target="_blank" rel="noopener noreferrer">
+                <a class="button button-primary" href="<?php echo e($docsUrl); ?>">
                     <?php echo lucide_icon('book-open'); ?>
                     <span>Explore the documentation</span>
                 </a>

@@ -12,7 +12,7 @@ class Home extends Controller {
 
     public function index() {
         $siteUrl = rtrim($_ENV['SITE_URL'] ?? site_url(), '/');
-        $docsUrl = 'https://docs.limaphp.com';
+        $docsUrl = '/docs';
 
         $page = [
             'title' => 'Lima PHP Framework | Modern MVC for Developers',
