@@ -6,7 +6,7 @@
 - [The routes file](#the-routes-file)
 - [Namespaced routes](#namespaced-routes)
 - [Fixed controllers and methods](#fixed-controllers-and-methods)
-  <!-- - [Custom 404 pages](#custom-404-pages) -->
+    <!-- - [Custom 404 pages](#custom-404-pages) -->
 - [Current route details](#current-route-details)
 
 <a id="how-routing-works"></a>
@@ -86,7 +86,8 @@ $routes = [
 
 Now `/dashboard` will call `Account::dashboard()`.
 
-<!-- <a id="custom-404-pages"></a>
+<a id="custom-404-pages"></a>
+
 ### Custom 404 pages
 
 You can define a custom 404 route using the `404` key.
@@ -102,7 +103,7 @@ $routes = [
 ];
 ```
 
-If Lima cannot find a controller or method, it will set the response code to `404` and call the route above. If no custom 404 route is available, Lima will output a simple `404 Not Found` response. -->
+If Lima cannot find a controller or method, it will set the response code to `404` and call the route above. If no custom 404 route is available, Lima will output a simple `404 Not Found` response.
 
 <a id="current-route-details"></a>
 

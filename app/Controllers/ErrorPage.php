@@ -19,7 +19,7 @@ class ErrorPage extends Controller
                 'canonical' => $siteUrl !== '' ? $siteUrl . '/404' : '/404',
                 'site_name' => 'Lima PHP',
                 'og_image' => $siteUrl !== '' ? $siteUrl . '/assets/images/og-card.svg' : '/assets/images/og-card.svg',
-                'docs_url' => 'https://docs.limaphp.com',
+                'docs_url' => '/docs',
                 'font_family' => 'Space Grotesk',
             ],
         ]);
