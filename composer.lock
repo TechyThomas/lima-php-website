@@ -201,16 +201,16 @@
         },
         {
             "name": "spacecow/lima-mvc",
-            "version": "1.0.2",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TechyThomas/lima-mvc.git",
-                "reference": "408aed6a783607a612a5e9c54b9f6103201b64cd"
+                "reference": "c21a06aebafb68689bf9d3aaecb08d433baba4f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TechyThomas/lima-mvc/zipball/408aed6a783607a612a5e9c54b9f6103201b64cd",
-                "reference": "408aed6a783607a612a5e9c54b9f6103201b64cd",
+                "url": "https://api.github.com/repos/TechyThomas/lima-mvc/zipball/c21a06aebafb68689bf9d3aaecb08d433baba4f0",
+                "reference": "c21a06aebafb68689bf9d3aaecb08d433baba4f0",
                 "shasum": ""
             },
             "require": {
@@ -241,9 +241,9 @@
             ],
             "support": {
                 "issues": "https://github.com/TechyThomas/lima-mvc/issues",
-                "source": "https://github.com/TechyThomas/lima-mvc/tree/1.0.2"
+                "source": "https://github.com/TechyThomas/lima-mvc/tree/1.0.3"
             },
-            "time": "2026-05-14T12:50:15+00:00"
+            "time": "2026-05-15T00:11:18+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
