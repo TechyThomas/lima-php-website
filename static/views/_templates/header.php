@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-$page = $data['page'] ?? [];
-$title = $page['title'] ?? 'Lima PHP Framework';
+$page        = $data['page'] ?? [];
+$title       = $page['title'] ?? 'Lima PHP Framework';
 $description = $page['description'] ?? 'Lima is a PHP MVC framework.';
-$canonical = $page['canonical'] ?? '/';
-$siteName = $page['site_name'] ?? 'Lima PHP';
-$ogImage = $page['og_image'] ?? '/assets/images/og-card.svg';
-$docsUrl = '/docs';
-$fontFamily = $page['font_family'] ?? 'Space Grotesk';
-$schema = $schema ?? [
+$canonical   = $page['canonical'] ?? '/';
+$siteName    = $page['site_name'] ?? 'Lima PHP';
+$ogImage     = $page['og_image'] ?? '/assets/images/og-card.svg';
+$docsUrl     = '/docs';
+$fontFamily  = $page['font_family'] ?? 'Space Grotesk';
+$schema      = $schema ?? [
     '@context' => 'https://schema.org',
     '@graph' => [
         [
@@ -35,6 +35,7 @@ $schema = $schema ?? [
 ?>
 <!doctype html>
 <html lang="en-GB">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -53,8 +54,11 @@ $schema = $schema ?? [
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="/assets/css/style.css" as="style">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=<?php echo e(str_replace(' ', '+', $fontFamily)); ?>:wght@400;500;600;700&display=swap">
-    <link rel="stylesheet" href="/assets/css/style.css?v=<?php echo filemtime(LIMA_ROOT . '/public_html/assets/css/style.css'); ?>">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=<?php echo e(str_replace(' ', '+', $fontFamily)); ?>:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet"
+        href="/assets/css/style.css?v=<?php echo filemtime(LIMA_ROOT . '/public_html/assets/css/style.css'); ?>">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
 
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="<?php echo e($siteName); ?>">
@@ -69,8 +73,10 @@ $schema = $schema ?? [
     <meta name="twitter:description" content="<?php echo e($description); ?>">
     <meta name="twitter:image" content="<?php echo e($ogImage); ?>">
 
-    <script type="application/ld+json"><?php echo json_encode($schema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT); ?></script>
+    <script
+        type="application/ld+json"><?php echo json_encode($schema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT); ?></script>
 </head>
+
 <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
 
@@ -91,7 +97,8 @@ $schema = $schema ?? [
                     </a>
                 </nav>
                 <div class="site-menu">
-                    <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-navigation">
+                    <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false"
+                        aria-controls="mobile-navigation">
                         <span class="menu-toggle-label">Menu</span>
                         <span class="menu-toggle-icon" aria-hidden="true">
                             <span></span>
@@ -100,7 +107,8 @@ $schema = $schema ?? [
                         </span>
                     </button>
                     <button class="menu-backdrop" type="button" aria-label="Close navigation" tabindex="-1"></button>
-                    <div class="mobile-flyout" id="mobile-navigation" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+                    <div class="mobile-flyout" id="mobile-navigation" role="dialog" aria-modal="true"
+                        aria-label="Mobile navigation">
                         <div class="mobile-flyout-header">
                             <span class="mobile-flyout-title">Navigate</span>
                             <button class="menu-close" type="button" aria-label="Close navigation">
@@ -111,7 +119,8 @@ $schema = $schema ?? [
                             <a href="#why-lima">Why Lima</a>
                             <a href="#developer-flow">Developer Flow</a>
                             <a href="#faq">FAQ</a>
-                            <a class="button button-secondary" href="<?php echo e($docsUrl); ?>" target="_blank" rel="noopener noreferrer">
+                            <a class="button button-secondary" href="<?php echo e($docsUrl); ?>" target="_blank"
+                                rel="noopener noreferrer">
                                 <?php echo lucide_icon('book-open'); ?>
                                 <span>Read docs</span>
                             </a>
